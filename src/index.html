@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+    <link href="https://unpkg.com/tabulator-tables@5.4.2/dist/css/tabulator.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disk Analyzer</title>
+    <script type="module" src="/main.js" defer></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.4.2/dist/js/tabulator.min.js"></script>
+    <style>
+      .logo.vanilla:hover {
+        filter: drop-shadow(0 0 2em #ffe21c);
+      }
+    </style>
+  </head>
+  <div id="context-menu">
+    <div class="item" id="Del"> Delete </div>
+    <div class="item" id="Rename"> Rename </div>
+    <div class="item" id="Back"> Back </div> 
+  </div>
+  <body>
+    <div class="row">
+        <input id="path-input" placeholder="Enter a path..." />
+        <button id="path-button" type="button">Analyze</button>
+        <button id="download-chart" type="button">Download Chart</button>
+    </div>
+    <div class="split">
+      <div id="tree_view"></div>
+      <div id="chart_container" style="height: 370px; width: 100%;"></div>
+    </div>
+  </body>
+</html>
